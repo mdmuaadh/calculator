@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="tab-bar">
+            <button class="tab-button active" onclick="showTab('basic')" id="tab-basic">Basic</button>
+            <button class="tab-button" onclick="showTab('sqrt')" id="tab-sqrt">Square Root</button>
+        </div>
+        <div id="tab-content-basic" class="tab-content">
+            <h2>Simple Calculator</h2>
+            <input type="number" id="num1" placeholder="First Number">
+            <input type="number" id="num2" placeholder="Second Number">
+            <div class="button-row">
+                <button onclick="calculate('add')">+</button>
+                <button onclick="calculate('subtract')">-</button>
+                <button onclick="calculate('multiply')">×</button>
+                <button onclick="calculate('divide')">÷</button>
+            </div>
+            <div class="result" id="result">Result: </div>
+        </div>
+        <div id="tab-content-sqrt" class="tab-content" style="display:none">
+            <h2>Square Root Calculator</h2>
+            <input type="number" id="sqrt-num" placeholder="Enter Number">
+            <div class="button-row">
+                <button onclick="calculateSqrt()">√</button>
+            </div>
+            <div class="result" id="sqrt-result">Result: </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
